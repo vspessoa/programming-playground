@@ -34,10 +34,16 @@ const newConsole = new Promise(
   }
 )
 
-const playWithMe = console => {
-  const message = `Dear friend, come to play with me in my new ${console.brand} ${console.model}`
-  return Promise.resolve(message)
+//const playWithMe = console => {
+//  const mesesage = `Dear friend, come to play with me in my new ${console.brand} ${console.model}`
+//  return Promise.resolve(mesesage)
+//}
+
+function playWithMe(() => console) {
+  const mesesage = `Dear friend, come to play with me in my new ${console.brand} ${console.model}`
+  return Promise.resolve(mesesage)
 }
+
 function printHello() {
   setTimeout(() =>{console.log('MIM ACHER')},3000)
 }
